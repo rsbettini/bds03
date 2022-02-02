@@ -139,8 +139,8 @@ public class EmployeeControllerIT {
 		result.andExpect(status().isUnprocessableEntity());
 		result.andExpect(jsonPath("$.errors[0].fieldName").value("email"));
 		result.andExpect(jsonPath("$.errors[0].message").value("Email inválido"));
-	}
-
+	}	
+	
 	@Test
 	public void insertShouldReturn422WhenAdminLoggedAndNullDepartment() throws Exception {
 
